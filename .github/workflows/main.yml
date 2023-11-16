@@ -1,0 +1,25 @@
+name: Main
+on:
+  push:
+    branches:
+    - main
+    - production
+  pull_request:
+    branches:
+    - main
+    - production
+  workflow_dispatch:
+jobs:
+  web-deploy:
+    name: Wdrożenia na serwer
+    runs-on: ubuntu-latest
+    steps:
+     - name: Github Checkout
+       uses: actions/checkout@v4
+     
+     - name: Synchronizacja do FTP
+       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+       with:
+         server: 172.203.200.58
+         username: ${{secret.ftp_username }}
+         password: ${{secret.ftp_username }}
