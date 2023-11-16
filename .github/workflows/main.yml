@@ -21,6 +21,6 @@ jobs:
        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
        with:
          server: 172.203.200.58
-         username: ${{secret.ftp_username }}
-         password: ${{secret.ftp_password }}
+         username: ${{secrets.ftp_username }}
+         password: ${{secrets.ftp_password }}
          server-dir: app_1/
