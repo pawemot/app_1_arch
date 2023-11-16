@@ -4,7 +4,7 @@ app = Flask(__name__)
 @app.route("/")
 
 def hello():
-	return "<h1> Pierwsza aplikacja w Pythonie (Flask)"
+	return "<h1> Pierwsza aplikacja w Pythonie (Flask)123</h1>"
 
 if __name__ == "__main__":
 
